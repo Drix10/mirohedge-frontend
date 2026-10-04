@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hypothesis Arena</title>
+<meta name="description" content="A research lab working to bring hedge-fund discipline to everyone, with AI that has to prove itself first.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="sections.css">
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="mark" href="#top"><i></i>Hypothesis Arena</a>
+  <div class="links"><a href="#path">Path</a><a href="#wall">The wall</a><a href="#method">Method</a><a href="#proof">Proof</a></div>
+</div></nav>
+
+<header class="hero" id="top">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div id="orb" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="badges">
+      <a class="pill" href="https://f.inc/" target="_blank" rel="noopener" aria-label="Founders, Inc. Canopy">
+        <picture><source srcset="assets/finc-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/finc-light.png" alt="" width="20" height="20"></picture>
+        <span>Part of <b>Founders, Inc.</b> Canopy</span><i>↗</i>
+      </a>
+    </div>
+    <h1>
+      <span class="line"><span>Investing that</span></span>
+      <span class="line"><span>doesn't need</span></span>
+      <span class="line"><span>a <em>fortune.</em></span></span>
+    </h1>
+    <div class="hero-foot">
+      <p>Hedge funds have always had the research, the discipline and the edge, and a minimum cheque that keeps everyone else out. We are a research lab working to change that, with AI that has to prove itself before it is trusted with a single dollar.</p>
+      <span class="mono">Scroll ↓</span>
+    </div>
+  </div>
+</header>
+
+<section id="question">
+  <div class="wrap">
+    <div class="prose reveal">
+      <span class="mono">00 / Question</span>
+      <div style="max-width:none">
+        <p class="question">Why can't making money be automated? <span>And why should it stay behind big pools and closed doors, when it could be open to everyone?</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="path">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="mono">01 / Path</span><h2>Three attempts, each one a harder lesson.</h2></div>
+    <div class="journey">
+      <article class="step reveal">
+        <div class="n">01</div>
+        <div><h3>Kaggle × Google Cloud</h3><span class="mono">Hackathon</span></div>
+        <div><p>Eight AI analysts debated investment decisions, then competed with simulated portfolios. Debate looked persuasive. Nothing proved it was right.</p></div>
+      </article>
+      <article class="step reveal">
+        <div class="n">02</div>
+        <div><h3>WEEX AI Wars</h3><span class="mono">Finalist</span></div>
+        <div><p>Four analysts ran in parallel, a judge picked, and trades executed on about $1,000 of volume. Real execution exposed how little an LLM's confidence is worth.</p></div>
+      </article>
+      <article class="step reveal">
+        <div class="n">03</div>
+        <div><h3>Founders, Inc. Canopy</h3><span class="mono">1.5% acceptance</span></div>
+        <div><p>An AI hedge fund for consumers, after selling ReeF, an anime game. We stopped midway. We hit the wall.</p></div>
+      </article>
+      <article class="step wall reveal">
+        <div class="n">04</div>
+        <div><h3>Hypothesis Arena</h3><span class="mono">Now</span></div>
+        <div><p>A different question. Not "can an LLM trade?" but "what must a model prove before anything it says can touch money?"</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="wall">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="mono">02 / The wall</span><h2>Why a language model can't just trade.</h2></div>
+    <div class="fails reveal">
+      <div class="fail"><div><span class="mono">i</span><h3>No ground truth</h3><p>A model has no feedback from the market. It can sound certain and be wrong, and never know.</p></div>
+        <svg viewBox="0 0 200 44" fill="none" stroke="currentColor"><path d="M0 30 Q25 4 50 24 T100 20 T150 28 T200 10" stroke-dasharray="3 4"/><circle cx="200" cy="10" r="3" fill="currentColor"/></svg></div>
+      <div class="fail"><div><span class="mono">ii</span><h3>Old training data</h3><p>What it knows ends at a cutoff. Markets don't. Anything it "remembers" may be leaked or stale.</p></div>
+        <svg viewBox="0 0 200 44" fill="none" stroke="currentColor"><path d="M0 34 H120"/><path d="M120 34 H200" stroke-dasharray="2 5"/><path d="M120 10 V40"/></svg></div>
+      <div class="fail"><div><span class="mono">iii</span><h3>Latency</h3><p>Seconds of inference are a lifetime for any edge that depends on being first.</p></div>
+        <svg viewBox="0 0 200 44" fill="none" stroke="currentColor"><path d="M0 22 H40 M60 22 H200"/><rect x="40" y="12" width="20" height="20" fill="currentColor" stroke="none"/></svg></div>
+      <div class="fail"><div><span class="mono">iv</span><h3>Not real time</h3><p>It reads a snapshot, then reasons about a world that has already moved on.</p></div>
+        <svg viewBox="0 0 200 44" fill="none" stroke="currentColor"><path d="M0 38 L40 30 L80 34 L120 14 L160 22 L200 6"/><path d="M80 0 V44" stroke-dasharray="2 4"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="mono">03 / Method</span><h2>Models read. Code decides.</h2></div>
+    <div class="lanes reveal">
+      <div class="lane">
+        <span class="mono">Advisory</span>
+        <h3>The model</h3>
+        <ul>
+          <li>Reads the world and forms hypotheses</li>
+          <li>Offers evidence, never instructions</li>
+          <li class="no">Never touches capital directly</li>
+        </ul>
+      </div>
+      <div class="lane">
+        <span class="mono">Authority</span>
+        <h3>The system</h3>
+        <ul>
+          <li>Deterministic and statistical layers</li>
+          <li>Decide what is allowed to reach the market</li>
+          <li>Default to doing nothing when unsure</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proof">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="mono">04 / Proof</span><h2>Influence is earned, never assumed.</h2></div>
+    <ol class="checks reveal">
+      <li><span>01</span><div><b>Hypotheses are stated before they are tested.</b><i>No searching for a story after the fact.</i></div></li>
+      <li><span>02</span><div><b>Evidence has to survive realistic costs and skepticism.</b><i>A good-looking backtest is not a result.</i></div></li>
+      <li><span>03</span><div><b>A model keeps its influence only while it helps.</b><i>If removing it changes nothing, it goes.</i></div></li>
+    </ol>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <h2 class="reveal">Evidence in. <em>Capital</em> out only if earned.</h2>
+    <a class="btn" href="https://www.linkedin.com/company/145275173/" target="_blank" rel="noopener">Follow on LinkedIn ↗</a>
+    <div class="fgrid">
+      <span class="mono">Hypothesis Arena · research, not advice</span>
+      <span class="mono"><a href="https://www.linkedin.com/company/145275173/" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="orb.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
