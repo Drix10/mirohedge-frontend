@@ -50,8 +50,7 @@ nav .links { display: flex; gap: 28px; }
 nav .links a { opacity: .75; transition: opacity .2s; }
 nav .links a:hover { opacity: 1; }
 .mark { display: flex; align-items: center; gap: 10px; }
-.mark i { width: 10px; height: 10px; background: currentColor; border-radius: 50%; display: block; animation: pulse 3s ease-in-out infinite; }
-@keyframes pulse { 50% { transform: scale(.55); } }
+.mark svg { display: block; }
 @media (max-width: 720px) { nav .links { display: none; } }
 
 /* hero */
@@ -87,7 +86,6 @@ section { padding: clamp(56px, 8vw, 112px) 0; border-top: 1px solid var(--rule);
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .hero h1 .line span { animation: none; transform: none; }
-  .mark i { animation: none; }
   html { scroll-behavior: auto; }
 }
 
