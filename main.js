@@ -7,6 +7,19 @@
   }), { threshold: 0.12 });
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
+  // count-up on stats
+  document.querySelectorAll("[data-count]").forEach((el) => {
+    const end = parseFloat(el.dataset.count), dec = +el.dataset.dec || 0, suf = el.dataset.suffix || "";
+    if (reduce) return;
+    const o = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return; o.disconnect();
+      const t0 = performance.now();
+      const step = (t) => { const p = Math.min((t - t0) / 1100, 1), v = end * (1 - Math.pow(1 - p, 3)); el.textContent = v.toFixed(dec) + suf; if (p < 1) requestAnimationFrame(step); };
+      requestAnimationFrame(step);
+    }), { threshold: 0.6 });
+    o.observe(el);
+  });
+
   // hero: a link graph where news ripples outward from a node
   const cv = document.getElementById("field");
   if (!cv || reduce) return;
