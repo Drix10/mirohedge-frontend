@@ -146,3 +146,7 @@ nav .cta { border: 1px solid currentColor; padding: 7px 14px; border-radius: 99p
 .stat span { display: block; margin-top: 10px; font-size: 14px; color: var(--ink-2); max-width: 26ch; }
 @media (max-width: 900px) { .strip .wrap { grid-template-columns: 1fr 1fr; } .stat { border-right: 0; border-bottom: 1px solid var(--rule); padding: 24px 12px 24px 0 !important; } .stat:nth-child(even) { padding-left: 16px !important; } }
 nav .links { align-items: center; }
+
+.strip .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.stat { border-right: 1px solid var(--rule); }
+.stat:last-child { border-right: 0; }
